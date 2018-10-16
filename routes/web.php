@@ -27,5 +27,11 @@ Route::get('/contact', function () {
 });
 
 Route::post('/contact', function () {
-    return view('about');
+
+    //dd(request());
+    $data = request() ->all();
+        //dd($data);
+    echo "Email:" . $data['email'] . '<br>';
+    echo "Body:" . $data['body'];
+
 });
